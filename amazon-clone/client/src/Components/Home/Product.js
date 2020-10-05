@@ -1,8 +1,25 @@
 import React from "react";
+import { useStateValue } from "../../StateProvider";
 import "./Product.css";
+
 // import product_img from "../../images/products/img1.jpg";
 
 export default function Product(props) {
+  const [{ basket }, dispatch] = useStateValue();
+  console.log("this is the Kart >>>", basket);
+
+  const moveToKart = () => {
+    dispatch({
+      type: "MOVE_TO_KART",
+      item: {
+        id: props.id,
+        title: props.title,
+        image: props.image,
+        price: props.price,
+        rating: props.rating,
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product__info">
@@ -20,7 +37,7 @@ export default function Product(props) {
         </div>
       </div>
       <img src={props.image} alt="coming soon.." />
-      <button>Add to Kart</button>
+      <button onClick={moveToKart}>Add to Kart</button>
     </div>
   );
 }

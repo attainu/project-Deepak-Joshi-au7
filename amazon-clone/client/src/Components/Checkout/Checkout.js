@@ -2,6 +2,7 @@ import React from "react";
 import checkout__add from "../../images/hero_section/img5.jpg";
 import Subtotal from "./Subtotal/Subtotal";
 import "./Checkout.css";
+import CheckoutProduct from "./BasketItem/CheckoutProduct";
 
 export default function Checkout() {
   return (
@@ -10,7 +11,7 @@ export default function Checkout() {
         <img className="checkout__ad" src={checkout__add} alt="" />
         <div>
           <h2 className="checkout__title">Items In Your Kart</h2>
-          {/*BasketItem*/}
+          <CheckoutProduct />
           {}
           {}
           {}
