@@ -17,10 +17,12 @@ export default function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        <div className="header__options">
-          <span className="header__option1 ">Hello Guest</span>
-          <span className="header__option2">Sign In</span>
-        </div>
+        <Link to="/login">
+          <div className="header__options">
+            <span className="header__option1 ">Hello Guest</span>
+            <span className="header__option2">Sign In</span>
+          </div>
+        </Link>
         <div className="header__options">
           <span className="header__option1">Returns</span>
           <span className="header__option2">& Orders</span>
