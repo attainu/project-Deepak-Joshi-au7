@@ -1,5 +1,5 @@
 .login__container {
-  width: 20%;
+  width: 30%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -18,8 +18,8 @@
 .login__logo {
   display: flex;
   width: 30%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: -20px;
+  margin-bottom: -40px;
   align-items: center;
   object-fit: contain;
   margin-left: auto;
