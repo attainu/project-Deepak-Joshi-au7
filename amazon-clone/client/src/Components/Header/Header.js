@@ -48,7 +48,7 @@ export default function Header() {
           </div>
         </Link>
         <div className="header__options">
-          <span className="header__option2">{!user ? "SignOut" : ""}</span>
+          <span className="header__option2">{user ? "SignOut" : ""}</span>
         </div>
       </div>
     </div>
