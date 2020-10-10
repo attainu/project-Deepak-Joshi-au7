@@ -60,7 +60,7 @@ function Signup() {
           >
             Register
           </button>
-          <h2 className="or"> OR </h2>
+          <h1 className="or"> OR </h1>
           <Link to="/login">
             <button className="login__signInButton">Sign in </button>
           </Link>

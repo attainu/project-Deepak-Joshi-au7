@@ -40,9 +40,7 @@ function Login() {
             Sign In
           </button>
         </form>
-        <b />
         <h1 className="or">OR</h1>
-        <b />
         <Link to="/Signup">
           <button className="login__registerButton">
             Create your Amazon Account
