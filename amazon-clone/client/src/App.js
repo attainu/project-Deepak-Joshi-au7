@@ -5,29 +5,13 @@ import "./App.css";
 import Home from "./Components/Home/Home";
 import Checkout from "./Components/Checkout/Checkout";
 import Login from "./Components/Login/Login";
-import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Signup from "./Components/SignUp/Signup";
 
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
     // Will only run when components loads
-    auth.onAuthStateChanged((authUser) => {
-      console.log("THE USER IS >>>", authUser);
-
-      if (authUser) {
-        dispatch({
-          type: "SET_USER",
-          user: authUser,
-        });
-      } else {
-        dispatch({
-          type: "SET_USER",
-          user: null,
-        });
-        //the user is logged out
-      }
-    });
   }, []);
   return (
     <Router>
@@ -35,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/Signup">
+            <Signup />
           </Route>
           <Route path="/Checkout">
             <Header />
