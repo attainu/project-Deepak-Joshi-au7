@@ -23,13 +23,13 @@ function Signup() {
           <h5>firstName</h5>
           <input
             type="text"
-            value={lastname}
+            value={firstname}
             onChange={(e) => setFirstname(e.target.value)}
           />
           <h5>lastName</h5>
           <input
             type="text"
-            value={firstname}
+            value={lastname}
             onChange={(e) => setLastname(e.target.value)}
           />
           <h5>E-mail</h5>
